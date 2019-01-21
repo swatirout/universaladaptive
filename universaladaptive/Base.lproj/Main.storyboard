@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,12 +13,90 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="universaladaptive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4b-4z-5mc">
+                                <rect key="frame" x="183.5" y="43.5" width="300" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.1833426339" blue="0.20784040179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Enj-fC-yqn"/>
+                                    <constraint firstAttribute="height" constant="600" id="Lpy-WL-ngo"/>
+                                    <constraint firstAttribute="height" constant="600" id="W7p-5W-jpR"/>
+                                    <constraint firstAttribute="width" constant="300" id="dC2-Uq-qsC"/>
+                                    <constraint firstAttribute="width" constant="300" id="qft-Xi-1o5"/>
+                                    <constraint firstAttribute="width" constant="100" id="zoM-k2-Lae"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Enj-fC-yqn"/>
+                                        <exclude reference="Lpy-WL-ngo"/>
+                                        <exclude reference="W7p-5W-jpR"/>
+                                        <exclude reference="dC2-Uq-qsC"/>
+                                        <exclude reference="qft-Xi-1o5"/>
+                                        <exclude reference="zoM-k2-Lae"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Enj-fC-yqn"/>
+                                        <include reference="dC2-Uq-qsC"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Lpy-WL-ngo"/>
+                                        <include reference="zoM-k2-Lae"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="W7p-5W-jpR"/>
+                                        <include reference="qft-Xi-1o5"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c4b-4z-5mc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0Wh-l4-CNN"/>
+                            <constraint firstItem="c4b-4z-5mc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43.5" id="CUO-2W-lYR"/>
+                            <constraint firstItem="c4b-4z-5mc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PCM-gR-Ugu"/>
+                            <constraint firstItem="c4b-4z-5mc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="T6r-w0-U8n"/>
+                            <constraint firstItem="c4b-4z-5mc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TNQ-cT-4fE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c4b-4z-5mc" secondAttribute="trailing" id="TrB-hY-Tgz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TrB-hY-Tgz"/>
+                                <exclude reference="0Wh-l4-CNN"/>
+                                <exclude reference="CUO-2W-lYR"/>
+                                <exclude reference="PCM-gR-Ugu"/>
+                                <exclude reference="T6r-w0-U8n"/>
+                                <exclude reference="TNQ-cT-4fE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="CUO-2W-lYR"/>
+                                <include reference="TNQ-cT-4fE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="PCM-gR-Ugu"/>
+                                <include reference="T6r-w0-U8n"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="TrB-hY-Tgz"/>
+                                <include reference="0Wh-l4-CNN"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
